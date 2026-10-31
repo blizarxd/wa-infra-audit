@@ -1,0 +1,14 @@
+{
+  "name": "wa-infra-audit",
+  "version": "1.0.0",
+  "description": "WhatsApp Business infrastructure tracking tool — audits Business Managers, WABAs, phone numbers, quality ratings and webhook subscriptions via the Meta Graph API. Zero dependencies.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "UNLICENSED",
+  "private": true
+}

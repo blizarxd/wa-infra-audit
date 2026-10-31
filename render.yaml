@@ -1,0 +1,18 @@
+# Render Blueprint — deploy this repo as a free Node web service.
+# Docs: https://render.com/docs/blueprint-spec
+services:
+  - type: web
+    name: wa-infra-audit
+    runtime: node
+    plan: free
+    # No dependencies to install — this app is pure Node stdlib.
+    buildCommand: "echo 'no build needed'"
+    startCommand: "node server.js"
+    envVars:
+      # Render injects PORT automatically; server.js already reads process.env.PORT.
+      - key: NODE_VERSION
+        value: "20"
+      # OPTIONAL: set a token here to enable live audits without pasting one.
+      # Leave UNSET to keep the site demo-only + paste-token mode (recommended).
+      # - key: META_ACCESS_TOKEN
+      #   sync: false
